@@ -94,5 +94,32 @@ public class Main {
             }
         }
 
+        System.out.println("\nЗадание 6");
+
+        int person = 60;
+        int capacityTrain = 102;
+        int capacitySeat = 60;
+        int capacityStanding = capacityTrain - capacitySeat;
+
+        if (person >= capacityTrain) {
+
+            System.out.println("Вагон уже полностью забит");
+        }
+        else {
+            if (person < capacityTrain && person >= capacitySeat) {
+
+                System.out.println("Вагон рассчитан на " + capacitySeat + " сидячих мест, осталось " +
+                        (capacityTrain - person) + " стоячих мест");
+            }
+            else {
+                if (person <= capacityTrain && person < capacitySeat) {
+
+                    capacityStanding = capacityTrain - capacitySeat;
+                    System.out.println("Вагон рассчитан на " + capacitySeat + " сидячих мест, осталось " +
+                            (capacitySeat - person) + " сидячих мест и " + capacityStanding + " стоячих мест");
+                }
+            }
+        }
+
         }
     }
