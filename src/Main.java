@@ -31,5 +31,20 @@ public class Main {
             System.out.println("На улице " + temperatureHigh + " градусов, можно идти без шапки");
         }
 
+        System.out.println("\nЗадание 3");
+
+        int speedLow = 50;
+        int speedHigh = 70;
+
+        if (speedLow < 60) {
+
+            System.out.println("Если скорость " + speedLow + " км/ч ,то можно ездить спокойно");
+        }
+
+        if (speedHigh > 60) {
+
+            System.out.println("Если скорость " + speedHigh + " км/ч ,то придется заплатить штраф");
+        }
+
     }
 }
