@@ -16,5 +16,20 @@ public class Main {
                     "нужно немного подождать");
         }
 
+        System.out.println("\nЗадание 2");
+
+        int temperatureLow = 4;
+        int temperatureHigh = 6;
+
+        if (temperatureLow < 5) {
+
+            System.out.println("На улице " + temperatureLow + " градусов, нужно надеть шапку");
+        }
+
+        if (temperatureHigh > 5) {
+
+            System.out.println("На улице " + temperatureHigh + " градусов, можно идти без шапки");
+        }
+
     }
 }
