@@ -96,7 +96,7 @@ public class Main {
 
         System.out.println("\nЗадание 6");
 
-        int person = 60;
+        int person = 50;
         int capacityTrain = 102;
         int capacitySeat = 60;
         int capacityStanding = capacityTrain - capacitySeat;
@@ -114,12 +114,35 @@ public class Main {
             else {
                 if (person <= capacityTrain && person < capacitySeat) {
 
-                    capacityStanding = capacityTrain - capacitySeat;
                     System.out.println("Вагон рассчитан на " + capacitySeat + " сидячих мест, осталось " +
                             (capacitySeat - person) + " сидячих мест и " + capacityStanding + " стоячих мест");
                 }
             }
         }
+
+        System.out.println("\nЗадание 7");
+
+        int one = 100;
+        int two = 10;
+        int three = 99;
+
+        if (one > two && one > three) {
+
+            System.out.println("One, большее число");
+        }
+        else {
+            if (two > one && two > three) {
+
+                System.out.println("Two, большее число");
+            }
+            else {
+                if (three > one && three > two) {
+
+                    System.out.println("Three, большее число");
+                }
+            }
+        }
+
 
         }
     }
