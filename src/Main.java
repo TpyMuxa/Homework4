@@ -40,7 +40,7 @@ public class Main {
 
         System.out.println("\nЗадание 4");
 
-        int age = 18;
+        int age = 16;
 
         if (age > 2 && age <= 6) {
 
@@ -54,13 +54,14 @@ public class Main {
 
             System.out.println("Если возраст человека равен " + age + " то, ему нужно ходить в университет");
         } else {
-
-            System.out.println("Если возраст человека равен " + age + " то, ему нужно ходить на работу");
+            if (age >= 24) {
+                System.out.println("Если возраст человека равен " + age + " то, ему нужно ходить на работу");
+            }
         }
 
         System.out.println("\nЗадание 5");
 
-        int childAge = 13;
+        int childAge = 14;
 
         if (childAge < 5) {
 
@@ -71,9 +72,10 @@ public class Main {
             System.out.println("Если возраст ребенка равен " + childAge + " ,то ему можно кататься на " +
                     "аттракционе в сопровождении взрослого");
         } else {
-
-            System.out.println("Если возраст ребенка равен " + childAge + " ,то ему можно кататься на " +
-                    "аттракционе без сопровождения взрослого");
+            if (childAge >= 14) {
+                System.out.println("Если возраст ребенка равен " + childAge + " ,то ему можно кататься на " +
+                        "аттракционе без сопровождения взрослого");
+            }
         }
 
         System.out.println("\nЗадание 6");
@@ -81,24 +83,27 @@ public class Main {
         int placeSeat = 61;
         int placeStanding = 40;
         int person = placeSeat + placeStanding;
+        int totalWagon = 102;
+        int totalSeat = 60;
+        int totalStanding = totalWagon - totalSeat;
 
-        if (person >= 102) {
+        if (person >= totalWagon) {
 
             System.out.println("Мест в вагоне больше нет !");
         } else {
 
-            if (placeSeat < 60 && placeStanding < 42) {
+            if (placeSeat < totalSeat && placeStanding < totalStanding) {
 
-                System.out.println("Сидячих мест осталось: " + (60 - placeSeat) + "\nСтоячих мест осталось: " +
-                        (42 - placeStanding));
+                System.out.println("Сидячих мест осталось: " + (totalSeat - placeSeat) + "\nСтоячих мест осталось: " +
+                        (totalStanding - placeStanding));
             }
-            if (placeSeat >= 60 && placeStanding < 42) {
+            if (placeSeat >= totalSeat && placeStanding < totalStanding) {
 
-                System.out.println("Сидячие места заняты, осталось стоячих: " + (42 - placeStanding) + " мест");
+                System.out.println("Сидячие места заняты, осталось стоячих: " + (totalStanding - placeStanding) + " мест");
             }
-            if (placeSeat < 60 && placeStanding >= 42) {
+            if (placeSeat < totalSeat && placeStanding >= totalStanding) {
 
-                System.out.println("Стоячие места заняты, осталось сидячих: " + (60 - placeSeat) + " мест");
+                System.out.println("Стоячие места заняты, осталось сидячих: " + (totalSeat - placeSeat) + " мест");
             }
         }
 
